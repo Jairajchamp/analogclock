@@ -1,0 +1,116 @@
+
+
+*{
+    margin: 0;
+    padding:0;
+}
+
+body{
+  height:100vh;
+  width:100vw;
+  background-color: grey;
+  display:flex;
+  justify-content: center;
+  align-content: center;
+  
+
+
+}
+.circle{
+  background-color:black;
+  height: 500px;
+  width: 500px;
+  border-radius: 360%;
+  border: 4px solid black;
+  position: relative;
+
+}
+.circle::before{
+  content:"";
+  height: 23px;
+  width:23px;
+  background-color: black;
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  border-radius: 50%;
+  z-index: 11;
+}
+.needle{
+  --radiation:0;
+  position:absolute;
+  left:50%;
+  bottom:50%;
+  transform-origin: bottom;
+  height:40%;
+  width:18px;
+
+  transform:translateX(-50%) rotate(calc(var(--radiation)*1deg)) ;
+
+  border-top-right-radius: 50%;
+  border-top-left-radius:50%;
+  border: 1px solid black;
+}
+.hours{
+  height:25%;
+  width:19px;
+  background-color:green;
+}
+.minutes{
+  height:40%;
+  width:10px;
+  background-color:red;
+}
+.seconds{
+  height:40%;
+  width:2px;
+ background-color:yellow;
+}
+.number{
+
+  --radius:0;
+  height: 500px;
+  width:500px;
+  color:white;
+  font-size: 2rem;
+  font-family: 'Kolker Brush', cursive;
+  position: absolute;
+  text-align: center;
+  transform:rotate(var(--radius));
+}
+
+
+.num1{
+  --radius:30deg;
+}
+.num2{
+  --radius:60deg;
+}
+.num3{
+  --radius:90deg;
+}
+.num4{
+  --radius:120deg;
+}
+.num5{
+  --radius:150deg;
+}
+.num6{
+  --radius:180deg;
+}
+.num7{
+  --radius:210deg;
+}
+.num8{
+  --radius:240deg;
+}
+.num9{
+  --radius:270deg;
+}
+.num10{
+  --radius:300deg;
+}
+.num11{
+  --radius:330deg;
+}
